@@ -1,0 +1,8 @@
+<form [formGroup]="myform" (ngSubmit)="onSubmission()" >
+
+    <p><label>Name : <input type="text" placeholder="Enter your Name"  formControlName="name" required></label></p>
+    <p><label>Email : <input type="text" placeholder="Enter your Email" formControlName="mail" required></label></p>
+    <p>
+        <input type="submit" value="Click To Submit" [disabled]="!myform.valid">
+    </p>
+</form>
